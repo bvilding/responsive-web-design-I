@@ -114,7 +114,7 @@ body {
 	flex-direction: column;
 	align-items: center;
 	font-family: 'Titillium Web',
-	sans-serif;
+		sans-serif;
 	box-sizing: border-box;
 }
 
@@ -140,26 +140,28 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
 /* End Reset */
 /* Helper Tags */
 a {
 	text-decoration: none;
 	color: black;
 }
+
 h1 {
 	font-family: 'Bangers',
-	cursive;
+		cursive;
 	font-size: 75px;
 }
 
 h2 {
 	font-family: 'Bangers',
-	cursive;
+		cursive;
 	font-size: 24px;
 }
 
 p {
-	font-size: 16px; 
+	font-size: 16px;
 }
 
 button {
@@ -176,14 +178,16 @@ button:hover {
 	background-color: black;
 	color: white;
 }
+
 /* End Helper Tags */
 /* Container */
 .container {
 	display: flex;
 	flex-flow: column wrap;
 	width: 100%;
-	
+
 }
+
 /* End Container */
 /* Navbar */
 .navbar {
@@ -223,6 +227,7 @@ button:hover {
 .hero .hero-content {
 	text-align: center;
 }
+
 /* End Hero */
 /* First-content */
 .first-content {
@@ -233,12 +238,12 @@ button:hover {
 }
 
 .first-content .content-inner {
-	width: 500px;
-	margin-top: 20px;
+	width: 48%;
 }
+
 /* End First-content */
 /* Middle Image */
-.middle-image{
+.middle-image {
 	display: flex;
 	background-image: url("/img/mid-page-accent.jpg");
 	background-size: cover;
@@ -246,6 +251,7 @@ button:hover {
 	height: 200px;
 	margin: 20px 50px;
 }
+
 /* End Middle Image */
 /* Second Content */
 .second-content {
@@ -258,18 +264,19 @@ button:hover {
 }
 
 .second-content .content-inner {
-	width: 300px;
-	margin: 20px 0;
+	width: 30%;
 }
+
 /* End Second Content */
 /* Address */
 address {
-    padding: 30px 50px;
-    height: 150px;
-    justify-content: space-between;
-    display: flex;
-    flex-flow: column wrap;
+	padding: 30px 50px;
+	height: 150px;
+	justify-content: space-between;
+	display: flex;
+	flex-flow: column wrap;
 }
+
 /* End Address */
 /* Footer */
 footer {
@@ -278,13 +285,14 @@ footer {
 	justify-content: center;
 	align-items: center;
 }
+
 /* End Footer */
 
 /* Media Queries */
 
 /* Tablet */
 
-@media(max-width: 700px){
+@media(max-width: 800px) {
 	.navbar {
 		display: flex;
 		flex-flow: column;
@@ -292,6 +300,7 @@ footer {
 		height: 100px;
 		align-items: center;
 	}
+
 	.navbar nav {
 		display: flex;
 		width: 100%;
@@ -308,9 +317,63 @@ footer {
 	.hero .hero-img {
 		display: none;
 	}
+
+	.first-content .content-inner {
+		width: 48%;
+	}
+
+	.second-content .content-inner {
+		width: 33%;
+	}
 }
 
 /* Mobile */
-@media(max-width: 500px){
-	 
+@media(max-width: 500px) {
+	.navbar {
+		display: flex;
+		flex-flow: column;
+		position: relative;
+		width: 100%;
+		height: 250px;
+		align-items: center;
+		justify-content: center;
+		background-color: white;
+		border-bottom: 0.5px solid lightgray;
+	}
+
+	.navbar nav {
+		width: 100%;
+		display: flex;
+		flex-flow: column;
+	}
+
+	.navbar nav a {
+		display: flex;
+		width: 100%;
+		justify-content: center;
+		padding: 3px 0px;
+		border-top: 1px solid grey;
+
+	}
+
+	.hero {
+		margin-top: 50px;
+	}
+
+	.hero .hero-img {
+		display: none;
+	}
+
+	.content-inner{
+		margin: 15px 0;
+	}
+
+	.first-content .content-inner {
+		width: 100%;
+	}
+
+	.second-content .content-inner {
+		width: 100%;
+	}
+	}
 }
