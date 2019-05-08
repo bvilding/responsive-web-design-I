@@ -1,3 +1,316 @@
-/* Use your own code or past solution for Great Idea Web Page CSS here! */
+/* Reset */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
 
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+
+body {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-family: 'Titillium Web',
+	sans-serif;
+	box-sizing: border-box;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* End Reset */
+/* Helper Tags */
+a {
+	text-decoration: none;
+	color: black;
+}
+h1 {
+	font-family: 'Bangers',
+	cursive;
+	font-size: 75px;
+}
+
+h2 {
+	font-family: 'Bangers',
+	cursive;
+	font-size: 24px;
+}
+
+p {
+	font-size: 16px; 
+}
+
+button {
+	padding: 5px 40px;
+	margin: 20px;
+	font-size: 14px;
+	background-color: transparent;
+	border: 1px solid black;
+	transition: 1s;
+}
+
+button:hover {
+	border: 1px solid black;
+	background-color: black;
+	color: white;
+}
+/* End Helper Tags */
+/* Container */
+.container {
+	display: flex;
+	flex-flow: column wrap;
+	width: 100%;
+	
+}
+/* End Container */
+/* Navbar */
+.navbar {
+	display: flex;
+	flex-flow: row wrap;
+	position: fixed;
+	width: 100%;
+	height: 75px;
+	align-items: center;
+	justify-content: center;
+	background-color: white;
+	border-bottom: 0.5px solid lightgray;
+}
+
+.navbar nav {
+	flex-flow: row wrap;
+	width: 60%;
+	margin-left: 50px;
+}
+
+.navbar nav a {
+	margin-right: 3%;
+}
+
+/* End Navbar */
+/* Hero */
+.hero {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	align-items: center;
+	margin: 100px 50px 25px;
+	padding-bottom: 30px;
+	border-bottom: 2px solid black;
+}
+
+.hero .hero-content {
+	text-align: center;
+}
+/* End Hero */
+/* First-content */
+.first-content {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	margin: 0 50px;
+}
+
+.first-content .content-inner {
+	width: 500px;
+	margin-top: 20px;
+}
+/* End First-content */
+/* Middle Image */
+.middle-image{
+	display: flex;
+	background-image: url("/img/mid-page-accent.jpg");
+	background-size: cover;
+	background-position: center;
+	height: 200px;
+	margin: 20px 50px;
+}
+/* End Middle Image */
+/* Second Content */
+.second-content {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	margin: 0 50px;
+	padding-bottom: 30px;
+	border-bottom: 2px solid black;
+}
+
+.second-content .content-inner {
+	width: 300px;
+	margin: 20px 0;
+}
+/* End Second Content */
+/* Address */
+address {
+    padding: 30px 50px;
+    height: 150px;
+    justify-content: space-between;
+    display: flex;
+    flex-flow: column wrap;
+}
+/* End Address */
+/* Footer */
+footer {
+	display: flex;
+	height: 100px;
+	justify-content: center;
+	align-items: center;
+}
+/* End Footer */
+
+/* Media Queries */
+
+/* Tablet */
+
+@media(max-width: 700px){
+	.navbar {
+		display: flex;
+		flex-flow: column;
+		width: 100%;
+		height: 100px;
+		align-items: center;
+	}
+	.navbar nav {
+		display: flex;
+		width: 100%;
+		flex-flow: row wrap;
+		justify-content: center;
+		order: 1;
+		margin-left: 0px;
+	}
+
+	.hero {
+		margin-top: 150px;
+	}
+
+	.hero .hero-img {
+		display: none;
+	}
+}
+
+/* Mobile */
+@media(max-width: 500px){
+	 
+}
