@@ -184,7 +184,6 @@ button:hover {
 .container {
 	display: flex;
 	flex-flow: column;
-
 }
 
 /* End Container */
@@ -361,6 +360,12 @@ footer {
 
 /* Desktop */
 @media(min-width: 950px) {
+	.container {
+		display: flex;
+		flex-flow: column;
+		width: 100%;
+	}
+
 	/* Navbar */
 	.navbar {
 		width: 100%;
@@ -394,6 +399,7 @@ footer {
 	.hero {
 		display: flex;
 		align-items: center;
+		justify-content: space-around;
 	}
 
 	.hero .hero-img {
@@ -411,10 +417,21 @@ footer {
 
 	.first-content .content-inner {
 		margin: 50px 0px;
-		width: 330px;
+		width: 450px;
 	}
 
 	/* End First Content */
+	/* Middle Image */
+	.middle-image {
+		display: flex;
+		background-image: url("/img/mid-page-accent.jpg");
+		background-size: cover;
+		background-position: center;
+		height: 200px;
+		margin: 0px 20px;
+	}
+
+	/* End Middle Image */
 	/* Second Content */
 	.second-content {
 		display: flex;
@@ -426,7 +443,7 @@ footer {
 
 	.second-content .content-inner {
 		margin: 50px 0px;
-		width: 200px;
+		width: 300px;
 	}
 
 	/* End Second Content */
