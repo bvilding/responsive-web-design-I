@@ -334,11 +334,12 @@ footer {
 		flex-flow: column;
 		position: relative;
 		width: 100%;
+		margin: 10px 0px;
 		height: 250px;
 		align-items: center;
 		justify-content: center;
 		background-color: white;
-		border-bottom: 0.5px solid lightgray;
+		border-bottom: none;
 	}
 
 	.navbar nav {
@@ -351,9 +352,12 @@ footer {
 		display: flex;
 		width: 100%;
 		justify-content: center;
-		padding: 3px 0px;
+		padding: 5px 0px;
 		border-top: 1px solid grey;
+	}
 
+	.navbar nav a:last-child{
+		border-bottom: 1px solid grey;
 	}
 
 	.hero {
@@ -374,6 +378,5 @@ footer {
 
 	.second-content .content-inner {
 		width: 100%;
-	}
 	}
 }
