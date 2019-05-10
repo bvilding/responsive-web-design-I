@@ -183,62 +183,69 @@ button:hover {
 /* Container */
 .container {
 	display: flex;
-	flex-flow: column wrap;
-	width: 100%;
-
+	flex-flow: column;
 }
 
 /* End Container */
 /* Navbar */
 .navbar {
-	display: flex;
-	flex-flow: row wrap;
-	position: fixed;
 	width: 100%;
-	height: 75px;
 	align-items: center;
-	justify-content: center;
-	background-color: white;
-	border-bottom: 0.5px solid lightgray;
+	display: flex;
+	flex-flow: column;
 }
 
 .navbar nav {
-	flex-flow: row wrap;
-	width: 60%;
-	margin-left: 50px;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	width: 100%;
 }
 
 .navbar nav a {
-	margin-right: 3%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	padding: 3px 0px;
+	border-top: 1px solid grey;
+}
+
+.navbar nav a:last-child {
+	border-bottom: 1px solid grey;
+}
+
+.navbar .logo {
+	order: -1;
+	margin: 10px 0px;
 }
 
 /* End Navbar */
 /* Hero */
 .hero {
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-around;
-	align-items: center;
-	margin: 100px 50px 25px;
-	padding-bottom: 30px;
-	border-bottom: 2px solid black;
+	margin: 25px 0px;
+	justify-content: center;
 }
 
 .hero .hero-content {
+	display: flex;
+	flex-flow: column;
+	align-items: center;
 	text-align: center;
+}
+
+.hero .hero-img {
+	display: none;
 }
 
 /* End Hero */
 /* First-content */
 .first-content {
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-between;
-	margin: 0 50px;
+	margin: 0px 20px;
+	border-top: 1px solid black;
 }
 
 .first-content .content-inner {
-	width: 48%;
+	margin: 50px 0px;
 }
 
 /* End First-content */
@@ -248,42 +255,37 @@ button:hover {
 	background-image: url("/img/mid-page-accent.jpg");
 	background-size: cover;
 	background-position: center;
-	height: 200px;
-	margin: 20px 50px;
+	height: 100px;
+	margin: 0px 20px;
 }
 
 /* End Middle Image */
 /* Second Content */
 .second-content {
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-between;
-	margin: 0 50px;
-	padding-bottom: 30px;
-	border-bottom: 2px solid black;
+	margin: 0px 20px;
+	border-bottom: 1px solid black;
 }
 
 .second-content .content-inner {
-	width: 30%;
+	margin: 50px 0px;
 }
 
 /* End Second Content */
 /* Address */
 address {
-	padding: 30px 50px;
-	height: 150px;
-	justify-content: space-between;
 	display: flex;
-	flex-flow: column wrap;
+	flex-flow: column;
+	height: 150px;
+	justify-content: space-around;
+	margin: 50px 20px;
 }
 
 /* End Address */
 /* Footer */
 footer {
 	display: flex;
-	height: 100px;
 	justify-content: center;
-	align-items: center;
+	height: 50px;
 }
 
 /* End Footer */
@@ -292,91 +294,158 @@ footer {
 
 /* Tablet */
 
-@media(max-width: 800px) {
+@media(min-width: 768px) {
+	/* Navbar */
 	.navbar {
-		display: flex;
-		flex-flow: column;
 		width: 100%;
-		height: 100px;
 		align-items: center;
+		justify-content: space-around;
+		display: flex;
+		flex-flow: row;
 	}
 
 	.navbar nav {
 		display: flex;
-		width: 100%;
-		flex-flow: row wrap;
-		justify-content: center;
-		order: 1;
-		margin-left: 0px;
-	}
-
-	.hero {
-		margin-top: 150px;
-	}
-
-	.hero .hero-img {
-		display: none;
-	}
-
-	.first-content .content-inner {
-		width: 48%;
-	}
-
-	.second-content .content-inner {
-		width: 33%;
-	}
-}
-
-/* Mobile */
-@media(max-width: 500px) {
-	.navbar {
-		display: flex;
-		flex-flow: column;
-		position: relative;
-		width: 100%;
-		margin: 10px 0px;
-		height: 250px;
+		flex-flow: row;
 		align-items: center;
-		justify-content: center;
-		background-color: white;
-		border-bottom: none;
-	}
-
-	.navbar nav {
-		width: 100%;
-		display: flex;
-		flex-flow: column;
+		width: 60%;
 	}
 
 	.navbar nav a {
+		width: 100%;
 		display: flex;
-		width: 100%;
 		justify-content: center;
-		padding: 5px 0px;
-		border-top: 1px solid grey;
+		padding: 3px 0px;
+		border-top: 0px solid grey;
 	}
 
-	.navbar nav a:last-child{
-		border-bottom: 1px solid grey;
+	.navbar nav a:last-child {
+		border-bottom: 0px solid grey;
 	}
 
-	.hero {
-		margin-top: 50px;
+	.navbar .logo {
+		order: 1;
+		margin: 10px 0px;
 	}
+	/* End Navbar */
 
-	.hero .hero-img {
-		display: none;
+	/* First Content */
+	.first-content {
+		display: flex;
+		display: row wrap;
+		justify-content: space-between;
+		margin: 0px 20px;
+		border-top: 1px solid black;
 	}
-
-	.content-inner{
-		margin: 15px 0;
-	}
-
 	.first-content .content-inner {
-		width: 100%;
+		margin: 50px 0px;
+		width: 330px;
+	}
+	/* End First Content */
+	/* Second Content */
+	.second-content {
+		display: flex;
+		display: row wrap;
+		justify-content: space-between;
+		margin: 0px 20px;
+		border-top: 1px solid black;
 	}
 
 	.second-content .content-inner {
+		margin: 50px 0px;
+		width: 200px;
+	}
+	/* End Second Content */
+}
+
+/* Desktop */
+@media(min-width: 950px) {
+	.container {
+		display: flex;
+		flex-flow: column;
 		width: 100%;
+	}
+
+	/* Navbar */
+	.navbar {
+		width: 100%;
+		align-items: center;
+		justify-content: space-around;
+		display: flex;
+		flex-flow: row;
+	}
+	.navbar nav {
+		display: flex;
+		flex-flow: row;
+		align-items: center;
+		width: 60%;
+	}
+	.navbar nav a {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		padding: 3px 0px;
+		border-top: 0px solid grey;
+	}
+	.navbar nav a:last-child {
+		border-bottom: 0px solid grey;
+	}
+	.navbar .logo {
+		order: 1;
+		margin: 10px 0px;
+	}
+	/* End Navbar */
+	/* Hero */
+	.hero {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+	}
+
+	.hero .hero-img {
+		display: flex;
+	}
+	/* End Hero */
+	/* First Content */
+	.first-content {
+		display: flex;
+		display: row wrap;
+		justify-content: space-between;
+		margin: 0px 20px;
+		border-top: 1px solid black;
+	}
+
+	.first-content .content-inner {
+		margin: 50px 0px;
+		width: 450px;
+	}
+
+	/* End First Content */
+	/* Middle Image */
+	.middle-image {
+		display: flex;
+		background-image: url("/img/mid-page-accent.jpg");
+		background-size: cover;
+		background-position: center;
+		height: 200px;
+		margin: 0px 20px;
+	}
+
+	/* End Middle Image */
+	/* Second Content */
+	.second-content {
+		display: flex;
+		display: row wrap;
+		justify-content: space-between;
+		margin: 0px 20px;
+		border-top: 1px solid black;
+	}
+
+	.second-content .content-inner {
+		margin: 50px 0px;
+		width: 300px;
+	}
+
+	/* End Second Content */
 	}
 }
